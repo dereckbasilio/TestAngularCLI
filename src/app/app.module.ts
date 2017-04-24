@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {ListService} from './list.service';
+
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 
@@ -16,7 +18,7 @@ import { ListComponent } from './list/list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

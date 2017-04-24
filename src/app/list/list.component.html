@@ -1,3 +1,7 @@
-<p>
-  list works!
-</p>
+<ul>
+  <li *ngFor='let item of list.items; let i = index'>
+    {{item.title}}
+    <small>Due {{item.dueDate | date}}</small>
+    <button (click)='list.deleteItem(i)'>&times;</button>
+  </li>
+</ul>
